@@ -10,4 +10,7 @@ async function connect(){
     let supply = await CONTRACT.totalSupply()
     document.getElementById("mintCount").innerHTML = "Minted: " + String(supply);
     document.getElementById("remainingCount").innerHTML = "Remaining: " + String(1024-supply);
+    if(supply == 1024){
+        document.getElementById("MintForm").style.visibility = "hidden"; 
+    }
 }

@@ -1,7 +1,10 @@
 <html>
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+		<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
 		<script src="api.js"></script>
+		<script src="mint.js"></script>
 		<script>
 			function callMintCount() {
 				document.getElementById("mintCount").innerHTML = "Minted: 0";
@@ -9,15 +12,16 @@
 			}
 		</script>
 		<link rel="stylesheet" href="style.css" />
+		<title>OnePixel</title>
 	</head>
-	<body onload="callMintCount();">
+	<body onload="connect()">
 		<div class="title window blue">Only One Pixel</div>
 		<div class="mint-stats-container window white">
 			<div><p id="mintCount"></p></div>
 			<div><p id="remainingCount"></p></div>
 			<div class="MintForm">
-				<input type="number" value=10></input>
-				<button>Mint</button>
+				<input id="InputAmount" type="number" value=10></input>
+				<button onclick="mint()">Mint</button>
 			</div>
 			<button class="colorChangeButton">Change Your Pixel's Color</button>
 		</div>

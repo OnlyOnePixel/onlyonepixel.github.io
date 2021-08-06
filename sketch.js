@@ -22,15 +22,17 @@ async function setup() {
 		let color = await CONTRACT.colorOf(i);
 		colors_to_fill.push(parseInt(color))
 	}
+	console.log(colors_to_fill)
 	createCanvas(320, 320);
 	background(50);
 	let counter = 1
 	for(let i = 0; i < 32; i++){
 		for(let j = 0; j < 32; j++){
 			let color = colors_to_fill[counter] ? colors[colors_to_fill[counter]] : "black"
-			fill(color)
+			console.log(i, j, color)
 			noStroke()
-			rect(0 + ((i+1)*10), 0 + ((j+i)*10), 10, 10);	
+			rect(0 + (i*10), 0 + (j*10), 10, 10);	
+			fill(color)
 			counter++	
 		}
 	}

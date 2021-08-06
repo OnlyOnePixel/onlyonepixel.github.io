@@ -8,20 +8,37 @@ body {
 	margin: auto;
 	height: 100vh;
 	width: 100vw;
-	background-color: #f3f2e9;
+	background-color: #c0c0c0;
 }
 .canvas {
 	margin: auto;
 }
 
 .title {
-	width: 100%;
+	justify-content: center;
+	margin: auto;
+	width: 90%;
 	text-align: center;
 	font-size: 72px;
 	background-color: #338fff;
 	color: #f3f2e9;
+	border: 10px solid #f3f2e9;
 }
 
 .mint-stats-container {
 	text-align: right;
+}
+
+#mintCount {
+	text-decoration: none;
+	border: transparent;
+	background: transparent;
+	text-align: center;
+}
+
+#remainingCount {
+	text-decoration: none;
+	border: transparent;
+	background: transparent;
+	text-align: center;
 }

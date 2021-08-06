@@ -30,7 +30,7 @@ async function setup() {
 			let color = colors_to_fill[counter] ? colors[colors_to_fill[counter]] : "black"
 			fill(color)
 			noStroke()
-			rect(0 + (i*10), 0 + (j*10), 10, 10);	
+			rect(0 + ((i+1)*10), 0 + ((j+i)*10), 10, 10);	
 			counter++	
 		}
 	}

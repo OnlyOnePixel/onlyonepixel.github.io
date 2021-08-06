@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+		<script src="sketch.js"></script>
+		<script src="api.js"></script>
+		<script>
+			function callMintCount() {
+				alert("ok");
+			}
+		</script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body onload="callMintCount();">
+		<div class="title">OnlyOne</div>
+		<div class="mint-stats-container">
+			<div><span>total minted: </span><span id="mintCount"></span></div>
+			<div>
+				<span>total remaining: </span><span id="mintCount">test</span>
+			</div>
+		</div>
+		<main class="canvas"></main>
+	</body>
+</html>

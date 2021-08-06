@@ -1,24 +1,27 @@
 <html>
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-		<script src="sketch.js"></script>
 		<script src="api.js"></script>
 		<script>
 			function callMintCount() {
-				document.getElementById("mintCount").value = "Johnny Bravo";
-				document.getElementById("mintCount").value = "Johnny Bravo";
+				document.getElementById("mintCount").innerHTML = "Minted: 0";
+				document.getElementById("remainingCount").innerHTML = "Remaining: 1024";
 			}
 		</script>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body onload="callMintCount();">
-		<div class="title">OnlyOne</div>
-		<div class="mint-stats-container">
-			<div><span>total minted: </span><input id="mintCount"></input></div>
-			<div>
-				<span>total remaining: </span><input id="remainingCount"></input>
+		<div class="title window blue">Only One Pixel</div>
+		<div class="mint-stats-container window white">
+			<div><p id="mintCount"></p></div>
+			<div><p id="remainingCount"></p></div>
+			<div class="MintForm">
+				<input type="number" value=10></input>
+				<button>Mint</button>
 			</div>
+			<button class="colorChangeButton">Change Your Pixel's Color</button>
 		</div>
-		<main class="canvas"></main>
+		<main id="canvas" class="canvas"></main>
 	</body>
+	<script src="sketch.js"></script>
 </html>

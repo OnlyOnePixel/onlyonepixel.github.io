@@ -9,36 +9,62 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: #c0c0c0;
+	font-family: System, monospace
 }
 .canvas {
 	margin: auto;
 }
 
 .title {
-	justify-content: center;
-	margin: auto;
-	width: 90%;
-	text-align: center;
-	font-size: 72px;
-	background-color: #338fff;
-	color: #f3f2e9;
-	border: 10px solid #f3f2e9;
+	font-size: 24px;
+	font-family: System, monospace
 }
 
 .mint-stats-container {
-	text-align: right;
+	text-align: center;
 }
 
 #mintCount {
 	text-decoration: none;
 	border: transparent;
 	background: transparent;
-	text-align: center;
 }
 
 #remainingCount {
 	text-decoration: none;
 	border: transparent;
 	background: transparent;
-	text-align: center;
+}
+
+.window.blue {
+    background #2e2c9b;
+    border-color: #fff;
+    -webkit-box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+}
+
+.window.white {
+    background: silver;
+    color: #000;
+    border-color: #fff;
+    -webkit-box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+}
+
+.window {
+    position: relative;
+    cursor: default;
+    margin: 1.5em auto;
+    width: 80%;
+    background: #3465a4;
+    color: #fff;
+    border: 6px double #fff;
+    padding: 1em;
+    -webkit-box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+    max-width: 640px;
+}
+
+.colorChangeButton {
+	margin: 10px;
 }

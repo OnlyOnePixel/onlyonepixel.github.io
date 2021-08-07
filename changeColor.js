@@ -11,5 +11,5 @@ async function changeColor(){
     let color = document.getElementById("selectedColor").value
     //console.log(color)
     //await CONTRACT.bulkBuy(amount, {value:String(amount * 50000000000000000), gasLimit: 50000})
-    await CONTRACT.changeColor(token, color)
+    await CONTRACT.changeColor(token, color, {gasLimit: 50000})
 }

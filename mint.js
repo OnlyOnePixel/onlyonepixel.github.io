@@ -8,5 +8,5 @@ async function mint(){
     let ABI = await fetch( "assets/abi/OnePixel.json" ).then( e=>e.json() )
     CONTRACT = new ethers.Contract( CONTRACT_ADDRESS, ABI,  SIGNER);
     let amount = parseInt(document.getElementById("InputAmount").value)
-    await CONTRACT.bulkBuy(amount, {value:String(amount * 50000000000000000)})
+    await CONTRACT.bulkBuy(amount, {value:String(amount * 50000000000000000), gasLimit: 2000000})
 }

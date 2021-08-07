@@ -42,10 +42,9 @@ async function setup() {
 	background(50);
 }
 function draw() {
-
 	if(colorGrid){
 		console.log(colorGrid)
-		let counter = 1;
+		let counter = 0;
 		for (let i = 0; i < 32; i++) {
 			for (let j = 0; j < 32; j++) {
 				console.log(colors[colorGrid[counter]['color']])
@@ -54,8 +53,8 @@ function draw() {
 					: "black";
 				console.log(i, j, color);
 				noStroke();
-				rect(0 + i * 10, 0 + j * 10, 10, 10);
 				fill(color);
+				rect(0 + (i * 10), 310-(0 + (j * 10)), 10, 10);
 				counter++;
 			}
 		}

@@ -28,7 +28,14 @@ async function getColor() {
       let data = e.data;
 
       colorGrid = data.pixels;
-
+      colorGrid = colorGrid.map(function (currentObject) {
+          return {
+              color: currentObject.color,
+              id: parseInt(currentObject.id)
+          };
+      });
+      colorGrid = colorGrid.slice().sort((a, b) => a.id - b.id);
+      
       //console.log("pixels==> ", pixels);
       return colorGrid;
     });

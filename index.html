@@ -6,6 +6,7 @@
 		<script src="graph.js"></script>
 		<script src="api.js"></script>
 		<script src="mint.js"></script>
+		<script src="tokenIds.js"></script>
 		<script>
 			function callMintCount() {
 				document.getElementById("mintCount").innerHTML = "Minted: 0";
@@ -15,7 +16,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>OnePixel</title>
 	</head>
-	<body onload="connect(); getColor()">
+	<body onload="connect();fillDropdown();getColor()">
 		<div class="title window blue">Only One Pixel</div>
 		<div class="mint-stats-container window white">
 			<div><p id="mintCount"></p></div>
@@ -25,12 +26,7 @@
 				<button onclick="mint()">Mint</button>
 			</div>
 			<div>
-				<select name="tokenID" id="selectedTokenID">
-					<option value="volvo">1</option>
-					<option value="saab">2</option>
-					<option value="mercedes">3</option>
-					<option value="audi">4</option>
-				  </select> 
+				<select name="tokenIdInput" id="tokenIdInput"></select> 
 				  <select name="color" id="selectedColor">
 					<option value="volvo">Black</option>
 					<option value="saab">White</option>

@@ -1,5 +1,5 @@
 var PROVIDER, SIGNER, CONTRACT;
-var CONTRACT_ADDRESS = "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0";
+var CONTRACT_ADDRESS = "0xa46BEADDD73c5fd2FF60a1fd276319B718D89469";
 
 async function connect(){
 	await ethereum.request( {method:"eth_requestAccounts"} );

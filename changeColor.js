@@ -9,7 +9,7 @@ async function changeColor(){
     CONTRACT = new ethers.Contract( CONTRACT_ADDRESS, ABI,  SIGNER);
     let token = parseInt(document.getElementById("tokenIdInput").value)
     let color = document.getElementById("selectedColor").value
-    console.log(color)
+    //console.log(color)
     //await CONTRACT.bulkBuy(amount, {value:String(amount * 50000000000000000)})
     await CONTRACT.changeColor(token, color)
 }

@@ -1,7 +1,7 @@
 var colorGrid;
 
 async function getColor() {
-  await fetch("https://api.studio.thegraph.com/query/5042/onepixel/v1.0.6", {
+  await fetch("https://api.studio.thegraph.com/query/5042/onepixel-firstrunprod/v1.0.0", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

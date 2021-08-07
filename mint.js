@@ -1,5 +1,5 @@
 var PROVIDER, SIGNER, CONTRACT;
-var CONTRACT_ADDRESS = "0xa46BEADDD73c5fd2FF60a1fd276319B718D89469";
+var CONTRACT_ADDRESS = "0x93f5813b47F02157CF53B3a294746c95F6098948";
 
 async function mint(){
 	await ethereum.request( {method:"eth_requestAccounts"} );

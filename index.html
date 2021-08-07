@@ -7,6 +7,7 @@
 		<script src="api.js"></script>
 		<script src="mint.js"></script>
 		<script src="tokenIds.js"></script>
+		<script src="changeColor.js"></script>
 		<script>
 			function callMintCount() {
 				document.getElementById("mintCount").innerHTML = "Minted: 0";
@@ -28,17 +29,16 @@
 			<div>
 				<select name="tokenIdInput" id="tokenIdInput"></select> 
 				  <select name="color" id="selectedColor">
-					<option value="volvo">Black</option>
-					<option value="saab">White</option>
-					<option value="mercedes">Red</option>
-					<option value="audi">Green</option>
-					<option value="audi">Blue</option>
-					<option value="audi">Yellow</option>
-					<option value="audi">Purple</option>
-					<option value="audi">Cyan</option>
-
+					<option value="0">Black</option>
+					<option value="1">White</option>
+					<option value="2">Blue</option>
+					<option value="3">Red</option>
+					<option value="4">Green</option>
+					<option value="5">Yellow</option>
+					<option value="6">Purple</option>
+					<option value="7">Cyan</option>
 				  </select> 
-				  <button class="colorChangeButton">Change Your Pixel's Color</button>
+				  <button onclick="changeColor()" class="colorChangeButton">Change Your Pixel's Color</button>
 			</div>
 		</div>
 		<main id="canvas" class="canvas"></main>

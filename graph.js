@@ -39,8 +39,6 @@ async function getColor() {
       //console.log("pixels==> ", pixels);
       return colorGrid;
     });
-
-  setInterval(getColor, 15000); //calls itself every
 }
 
 //.then((e) => console.log(e.data.json()));

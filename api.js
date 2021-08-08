@@ -7,10 +7,4 @@ async function connect(){
     SIGNER = PROVIDER.getSigner()
     let ABI = await fetch( "assets/abi/OnePixel.json" ).then( e=>e.json() )
     CONTRACT = new ethers.Contract( CONTRACT_ADDRESS, ABI,  SIGNER);
-    let supply = await CONTRACT.totalSupply()
-    document.getElementById("mintCount").innerHTML = "Minted: " + String(supply);
-    document.getElementById("remainingCount").innerHTML = "Remaining: " + String(1024-supply);
-    if(supply == 1024){
-        document.getElementById("MintForm").style.visibility = "hidden"; 
-    }
 }

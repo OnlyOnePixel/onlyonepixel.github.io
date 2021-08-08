@@ -14,7 +14,10 @@ body {
 .canvas {
 	margin: auto;
 }
-
+.p5Canvas {
+	width: 480px !important;
+	height: 480px !important;
+}
 .title {
 	font-size: 24px;
 	font-family: System, monospace

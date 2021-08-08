@@ -8,25 +8,12 @@
 		<script src="mint.js"></script>
 		<script src="tokenIds.js"></script>
 		<script src="changeColor.js"></script>
-		<script>
-			function callMintCount() {
-				document.getElementById("mintCount").innerHTML = "Minted: 0";
-				document.getElementById("remainingCount").innerHTML = "Remaining: 1024";
-			}
-		</script>
 		<link rel="stylesheet" href="style.css" />
 		<title>OnePixel</title>
 	</head>
 	<body onload="connect();fillDropdown();getColor()">
-		<div class="title window blue">Only One Pixel<br>August 7th 3:00pm EST<br>Max 10 Pixels / TX</div>
+		<div class="title window blue">Only One Pixel<br>Sold Out!<br>Full Grid Below Coming Soon</div>
 		<div class="mint-stats-container window white">
-			<div><p id="mintCount"></p></div>
-			<div><p id="remainingCount"></p></div>
-			<div><p>0.05 ETH for 1 Pixel</p></div>
-			<div class="MintForm" id="MintForm">
-				<input id="InputAmount" type="number" value=10></input>
-				<button onclick="mint()">Mint</button>
-			</div>
 			<div>
 				<select name="tokenIdInput" id="tokenIdInput"></select> 
 				  <select name="color" id="selectedColor">

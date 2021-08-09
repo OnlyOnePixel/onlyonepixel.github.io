@@ -39,7 +39,6 @@ sorting on next push sorry chuby
 
 async function setup() {
 	createCanvas(320, 320);
-	background(50);
 }
 function draw() {
 	if(colorGrid){

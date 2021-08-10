@@ -29,9 +29,7 @@ async function getColor() {
   })
     .then((e) => e.json())
     .then((e) => {
-
       let data = e.data;
-
       colorGrid = data.pixels;
       colorGrid = colorGrid.map(function (currentObject) {
           return {
@@ -67,10 +65,8 @@ async function getLast24Colors() {
   })
     .then((e) => e.json())
     .then((e) => {
-
       let data = e.data;
       let pixels = data.pixels;
-
       pixels = pixels.map(function (currentObject) {
           return {
               color: currentObject.color,

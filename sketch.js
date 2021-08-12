@@ -34,7 +34,7 @@ function draw() {
 					counter++;
 				}
 			}
-			document.getElementById("matches").innerHTML = "Black Pixels: " + String(targetMatchCounter);
+			document.getElementById("matches").innerHTML = String(targetMatchCounter) + " Black Pixels";
 		}
 	}
 }

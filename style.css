@@ -27,6 +27,13 @@ body {
 	text-align: center;
 }
 
+.matches {
+	text-align: center;
+	font-size:2em;
+	padding-bottom: 0.5em;
+}
+
+
 #mintCount {
 	text-decoration: none;
 	border: transparent;

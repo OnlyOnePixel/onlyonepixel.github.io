@@ -40,13 +40,18 @@ sorting on next push sorry chuby
 async function setup() {
 	createCanvas(320, 320);
 }
+
 function draw() {
 	if(colorGrid){
 		if(colorGrid.length == 1024){
 			let counter = 0;
+			targetMatchCounter = 0;
 			for (let i = 0; i < 32; i++) {
 				for (let j = 0; j < 32; j++) {
 					//console.log(colors[colorGrid[counter]['color']])
+					if(colorGrid[counter]['color'] == 0){
+						targetMatchCounter++;
+					}
 					let color = colors[colorGrid[counter]['color']]
 						? colors[colorGrid[counter]['color']]
 						: "black";
@@ -57,6 +62,7 @@ function draw() {
 					counter++;
 				}
 			}
+			document.getElementById("matches").innerHTML = "Black Pixels: " + String(targetMatchCounter);
 		}
 	}
 }

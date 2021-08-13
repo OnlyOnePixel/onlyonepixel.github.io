@@ -14,9 +14,14 @@ body {
 .canvas {
 	margin: auto;
 }
-.p5Canvas {
-	width: 480px !important;
-	height: 480px !important;
+
+@media screen and (min-width: 800px) {
+  .p5Canvas {
+    width: 480px !important;
+    height: 480px !important;
+  }
+}
+
 }
 .title {
 	font-size: 24px;

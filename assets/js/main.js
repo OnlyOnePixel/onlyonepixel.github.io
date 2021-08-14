@@ -1,4 +1,5 @@
 async function main(){
+    await getColors()
     await connect()
     if(SIGNER){
         let address = await SIGNER.getAddress()

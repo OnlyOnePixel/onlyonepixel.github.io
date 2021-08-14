@@ -12,21 +12,18 @@ body{
 
   
 .p5Canvas {
-  width: 480px !important;
-  height: 480px !important;
-  padding-top: 40px !important;
   padding: 0;
   margin: auto;
   display: block;
 }
 
 .form-select{
-  width:20% !important;
+  width:80% !important;
   margin:10px auto;
 }    
 
 .change-color-btn{
-  width:20% !important;
+  width:80% !important;
   margin:5px auto;
 }    
 
@@ -34,3 +31,21 @@ body{
 	text-align: center;
 	font-size:2em;
 }
+
+
+
+
+@media screen and (min-width: 800px) {
+    .p5Canvas {
+      width: 480px !important;
+      height: 480px !important;
+      padding-top: 40px !important;
+    }
+    .form-select{
+      width:20% !important;
+    }    
+    .change-color-btn{
+      width:20% !important;
+    }    
+
+  }

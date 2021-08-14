@@ -15,7 +15,7 @@ async function getColor() {
     body: JSON.stringify({
       query: `
       query {
-        pixels(first: 1000) {
+        pixels(first: 512) {
           id
           color
         }
@@ -37,7 +37,6 @@ async function getColor() {
               id: parseInt(currentObject.id)
           };
       });      
-      //console.log("pixels==> ", pixels);
       return colorGrid;
     });
 }
@@ -51,7 +50,7 @@ async function getLast24Colors() {
     body: JSON.stringify({
       query: `
       query {
-        pixels(skip: 1000, first: 24) {
+        pixels(skip: 512, first: 512) {
           id
           color
         }
@@ -74,7 +73,6 @@ async function getLast24Colors() {
           };
       });
       colorGrid = colorGrid.concat(pixels)
-      //console.log("pixels==> ", pixels);
       return colorGrid;
     });
 }

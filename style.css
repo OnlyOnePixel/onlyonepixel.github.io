@@ -1,85 +1,51 @@
-body {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	border: 10px solid transparent;
-	vertical-align: center;
-	margin: auto;
-	height: 100vh;
-	width: 100vw;
-	background-color: #c0c0c0;
-	font-family: System, monospace
-}
-.canvas {
-	margin: auto;
+body{
+	background-color: #c0c0c0 !important;
 }
 
-@media screen and (min-width: 800px) {
-  .p5Canvas {
-    width: 480px !important;
-    height: 480px !important;
-  }
+.navbar{
+    width:65% !important;
+    margin:15px auto;
+    left:0;
+    right:0;
+    padding:0;
 }
 
-}
-.title {
-	font-size: 24px;
-	font-family: System, monospace
+  
+.p5Canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
 }
 
-.mint-stats-container {
-	text-align: center;
-}
+.form-select{
+  width:80% !important;
+  margin:10px auto;
+}    
+
+.change-color-btn{
+  width:80% !important;
+  margin:5px auto;
+}    
 
 .matches {
 	text-align: center;
 	font-size:2em;
-	padding-bottom: 0.5em;
 }
 
 
-#mintCount {
-	text-decoration: none;
-	border: transparent;
-	background: transparent;
-}
 
-#remainingCount {
-	text-decoration: none;
-	border: transparent;
-	background: transparent;
-}
 
-.window.blue {
-    background #2e2c9b;
-    border-color: #fff;
-    -webkit-box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
-    box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
-}
+@media screen and (min-width: 800px) {
+    .p5Canvas {
+      width: 480px !important;
+      height: 480px !important;
+      padding-top: 40px !important;
+    }
+    .form-select{
+      width:20% !important;
+    }    
+    .change-color-btn{
+      width:20% !important;
+    }    
 
-.window.white {
-    background: silver;
-    color: #000;
-    border-color: #fff;
-    -webkit-box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
-    box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
-}
-
-.window {
-    position: relative;
-    cursor: default;
-    margin: 1.5em auto;
-    width: 80%;
-    background: #3465a4;
-    color: #fff;
-    border: 6px double #fff;
-    padding: 1em;
-    -webkit-box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgb(0 0 0 / 50%);
-    box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgb(0 0 0 / 50%);
-    max-width: 640px;
-}
-
-.colorChangeButton {
-	margin-top: 10px;
-}
+  }

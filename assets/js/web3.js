@@ -7,4 +7,10 @@ async function connect(){
     SIGNER = PROVIDER.getSigner()
     let ABI = await fetch( "assets/abi/OnePixel.json" ).then( e=>e.json() )
     CONTRACT = new ethers.Contract( CONTRACT_ADDRESS, ABI,  SIGNER);
+    if(SIGNER){
+        let address = await SIGNER.getAddress()
+//        Signed in as: <a href="#login">0xff</a>
+        document.getElementById("account-name").innerHTML = "Signed in as: <a href=\"https://opensea.io/" + address + "\">" + address.substring(0,7) + "</a>"
+
+    }
 }

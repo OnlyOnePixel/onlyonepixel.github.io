@@ -9,6 +9,8 @@ var colors = [
 	"#75CEC8",
 ];
 
+var arr = []; //array to store each coordinate for mouseover display
+
 /*color array is colorGrid, posted in this format: 
 
 0: {color: "5", id: "0x1"}
@@ -41,22 +43,41 @@ async function setup() {
 	createCanvas(320, 320);
 }
 function draw() {
-	if(colorGrid){
-		if(colorGrid.length == 1024){
+	if (colorGrid) {
+		if (colorGrid.length == 1024) {
 			let counter = 0;
 			for (let i = 0; i < 32; i++) {
 				for (let j = 0; j < 32; j++) {
 					//console.log(colors[colorGrid[counter]['color']])
-					let color = colors[colorGrid[counter]['color']]
-						? colors[colorGrid[counter]['color']]
+					let color = colors[colorGrid[counter]["color"]]
+						? colors[colorGrid[counter]["color"]]
 						: "black";
 					//console.log(i, j, color);
 					noStroke();
 					fill(color);
-					rect(0 + (i * 10), 310-(0 + (j * 10)), 10, 10);
+					let xCoord = 0 + i * 10;
+					let yCoord = 310 - (0 + j * 10);
+					let entry = [
+						color,
+						xCoord,
+						yCoord,
+						colorGrid[counter]["id'"],
+					];
+					arr.push(entry); //stores in array for color check later
+
+					rect(xCoord, yCoord, 10, 10);
+
 					counter++;
 				}
 			}
+			fill(255);
+			rect(mouseX, mouseY - 25, 50, 50);
+			fill(0);
+			text(
+				"(" + round(mouseX / 10) + ", " + round(mouseY / 10) + ")",
+				mouseX,
+				mouseY
+			);
 		}
 	}
 }

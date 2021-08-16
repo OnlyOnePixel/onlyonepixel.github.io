@@ -36,7 +36,7 @@ function draw() {
 			fill(255);
 
 			if (mouseX > width - 100) {
-				mouseX -= 100;
+				mouseX -= 200;
 			}
 			if (mouseY > height - 25) {
 				mouseY -= 25;

@@ -9,9 +9,6 @@ var colors = [
 	"#75CEC8",
 ];
 
-var arr = []; //array to store each coordinate for mouseover display
-
-
 async function setup() {
 	createCanvas(320, 320);
 }
@@ -30,13 +27,6 @@ function draw() {
 					fill(color);
 					let xCoord = 0 + i * 10;
 					let yCoord = 310 - (0 + j * 10);
-					let entry = [
-						color,
-						xCoord,
-						yCoord,
-						colorGrid[counter]["id'"],
-					];
-					arr.push(entry); //stores in array for color check later
 
 					rect(xCoord, yCoord, 10, 10);
 
@@ -44,13 +34,33 @@ function draw() {
 				}
 			}
 			fill(255);
+
+			if (mouseX > width - 100) {
+				mouseX -= 100;
+			}
+			if (mouseY > height - 25) {
+				mouseY -= 25;
+			}
+
+			if (mouseX < 0) {
+				mouseX += 100;
+			}
+			if (mouseY < 0) {
+				mouseY += 25;
+			}
 			rect(mouseX, mouseY - 25, 200, 50);
 			fill(0);
-			let Cx = round(mouseX / 10)
-			let Cy = 32 - round(mouseY / 10)
-			let tokenID = ((Cx * 32) + Cy) + 1
+			let Cx = round(mouseX / 10);
+			let Cy = 32 - round(mouseY / 10);
+			let tokenID = Cx * 32 + Cy + 1;
 			text(
-				"Token ID: " + tokenID + "\nCoordinates: (" + Cx + ", " + Cy + ")",
+				"Token ID: " +
+					tokenID +
+					"\nCoordinates: (" +
+					Cx +
+					", " +
+					Cy +
+					")",
 				mouseX,
 				mouseY
 			);

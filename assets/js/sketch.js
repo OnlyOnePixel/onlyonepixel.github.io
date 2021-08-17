@@ -10,7 +10,7 @@ var colors = [
 ];
 
 var isValid = false
-var tokenID;
+var tokenID, targetMatchCounter;
 
 async function setup() {
 	createCanvas(320, 320);
@@ -20,8 +20,13 @@ function draw() {
 	if (colorGrid) {
 		if (colorGrid.length == 1024) {
 			let counter = 0;
+			targetMatchCounter = 0;
+
 			for (let i = 0; i < 32; i++) {
 				for (let j = 0; j < 32; j++) {
+					if(colorGrid[counter]['color'] == 0){
+						targetMatchCounter++;
+					}
 					//console.log(colors[colorGrid[counter]['color']])
 					let color = colors[colorGrid[counter]["color"]]
 						? colors[colorGrid[counter]["color"]]

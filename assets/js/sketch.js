@@ -37,6 +37,7 @@ function draw() {
 					counter++;
 				}
 			}
+			document.getElementById("matches").innerHTML = String(targetMatchCounter) + "/1024 Black Pixels";
 			let Cx = round(mouseX / 10);
 			let Cy = 32 - round(mouseY / 10);
 			let offsetX = 5

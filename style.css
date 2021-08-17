@@ -36,10 +36,13 @@ body{
 
 
 @media screen and (min-width: 800px) {
+    .matches {
+      padding-bottom: 40px;
+    }
+    
     .p5Canvas {
       width: 480px !important;
       height: 480px !important;
-      padding-top: 40px !important;
     }
     .form-select{
       width:20% !important;

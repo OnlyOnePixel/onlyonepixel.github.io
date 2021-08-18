@@ -10,7 +10,7 @@ var colors = [
 ];
 
 async function setup() {
-	createCanvas(320, 320);
+	createCanvas(480, 480);
 }
 function draw() {
 	if (colorGrid) {
@@ -28,7 +28,7 @@ function draw() {
 					let xCoord = 0 + i * 10;
 					let yCoord = 310 - (0 + j * 10);
 
-					rect(xCoord, yCoord, 10, 10);
+					rect(xCoord * 1.5, yCoord * 1.5, 15, 15);
 
 					counter++;
 				}
@@ -50,8 +50,8 @@ function draw() {
 			}
 			rect(mouseX, mouseY - 25, 200, 50);
 			fill(0);
-			let Cx = round(mouseX / 10);
-			let Cy = 32 - round(mouseY / 10);
+			let Cx = floor(mouseX / 15);
+			let Cy = 32 - floor(mouseY / 15);
 			let tokenID = Cx * 32 + Cy + 1;
 			text(
 				"Token ID: " +

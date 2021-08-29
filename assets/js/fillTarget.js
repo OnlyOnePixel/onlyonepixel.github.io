@@ -13,6 +13,4 @@ function fillTarget() {
     let tokenId = document.getElementById("tokenIdInput").value
     let target = TARGET_COLORS[tokenId-1]
     document.getElementById("selectedColor").value = COLORS[target]
-    console.log(tokenId, target)
-
 }

@@ -16,5 +16,8 @@ async function fillDropdown(){
         option.text = str(tokenId) + " - (" + pair[0] + ", " + pair[1] + ")" + " - " + color
         option.value = tokenId;
         select.add(option, 0);
+        if(i == balance-1){
+            fillTarget()
+        }
     }
 }

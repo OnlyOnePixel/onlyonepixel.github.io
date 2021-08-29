@@ -7,7 +7,7 @@ async function main(){
         let pxlBalance = await CONTRACT.balanceOf(address);
         if(pxlBalance > 0){
             document.getElementById('colorChanger').style.display = '';
-            await fillDropdown()                
+            await fillDropdown()          
         }
     }
 

@@ -27,12 +27,25 @@ body{
   margin:5px auto;
 }    
 
-.matches {
+.title {
+  line-height: 95%;
 	text-align: center;
 	font-size:2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.subtitle {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em
 }
 
-
+ul {
+  text-align: center;
+  list-style-position: inside;
+}
 
 
 @media screen and (min-width: 800px) {

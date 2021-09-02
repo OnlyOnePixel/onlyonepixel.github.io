@@ -37,7 +37,10 @@
             </div>
         </div>
     </nav>
-    <div class="matches" id="matches"></div>
+    <div class="title" id="title">OnePixel: Decentralized on-chain<br> community-generated art</div>
+    <div class="subtitle">We're a DAO of 300+ individuals owning 1024 pixels on the 32x32 grid below. We collectively source, vote, and create on-chain art by manually changing the colors of the individual pixels.</div>
+    <hr style="width:30%;text-align:center;margin-left:auto;margin-right: auto;">
+    <div class="title" id="title">The Grid</div>
     <main id="canvas" class="canvas"></main>
     <div class="col-md-12 text-center" id="colorChanger" style="display:none;">
         <select class="form-select" name="tokenIdInput" id="tokenIdInput" onchange=fillTarget()></select> 
@@ -53,6 +56,15 @@
         </select>    
         <button type="button" class="btn btn-primary change-color-btn" onclick=changeColor()>Change Color</button>
     </div>
+    <hr style="width:30%;text-align:center;margin-left:auto;margin-right: auto;">
+    <div style="font-weight: bold; text-align: center;">How it Works: </div>
+    <ul>
+      <li>Members source and vote on a piece of art to create on The Grid</li>
+      <li>Members pay gas to change the color of their pixel on chain</li>
+      <li>A snapshot is taken of the "finished" piece</li>
+      <li>Participants are airdropped ownership over the completed art</li>
+    </ul>
+        
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
     <script src="./assets/js/graph.js"></script>
